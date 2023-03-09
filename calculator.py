@@ -2,22 +2,26 @@ import argparse
 
 
 def add(args):
-    result = args.x + args.y
+    result = sum(args.numbers)
     print(result)
 
 
 def subtract(args):
-    result = args.x - args.y
+    result = args.numbers[0] - sum(args.numbers[1:])
     print(result)
 
 
 def multiply(args):
-    result = args.x * args.y
+    result = 1
+    for num in args.numbers:
+        result *= num
     print(result)
 
 
 def divide(args):
-    result = args.x / args.y
+    result = args.numbers[0]
+    for num in args.numbers[1:]:
+        result /= num
     print(result)
 
 
