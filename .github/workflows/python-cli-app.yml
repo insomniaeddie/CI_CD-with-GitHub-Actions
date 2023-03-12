@@ -34,7 +34,7 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest test.py add -v 
-        pytest test.py subtract -v
-        pytest test.py multiply -v
-        pytest test.py divide -v
+        pytest -v test.py::test_add
+        pytest -v test.py::test_subtract
+        pytest -v test.py::test_multiply
+        pytest -v test.py::test_divide
