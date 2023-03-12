@@ -34,4 +34,4 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest -m test 
+        pytest Q:\NetOps\Devops\CI CD\Project\Python-Command-Line-App-CI-CD-with-GitHub-Actions\test.py
