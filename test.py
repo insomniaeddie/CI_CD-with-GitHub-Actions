@@ -2,7 +2,7 @@
 
 import pytest
 import subprocess
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide  # noqa
 
 # define a test function to test the add function
 
