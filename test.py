@@ -7,6 +7,7 @@ from calculator import add, subtract, multiply, divide  # noqa
 # define a test function to test the add function
 
 
+@pytest.mark.test
 def test_add():
     # use subprocess to run the calculator app with arguments for adding 2 and 3
     result = subprocess.check_output(
@@ -17,12 +18,14 @@ def test_add():
 # define a test function to test the subtract function
 
 
+@pytest.mark.test
 def test_subtract():
     result = subprocess.check_output(
         ['python', 'calculator.py', 'subtract', '10', '5'])
     assert int(result) == 5
 
 
+@pytest.mark.test
 # define a test function to test the multiply function
 def test_multiply():
     result = subprocess.check_output(
@@ -30,6 +33,7 @@ def test_multiply():
     assert int(result) == 6
 
 
+@pytest.mark.test
 # define a test function to test the divide function
 def test_divide():
     result = subprocess.check_output(
